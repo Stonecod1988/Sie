@@ -1,16 +1,14 @@
 import {interpret} from "robot3";
 import {useCallback, useRef, useState} from "react"
 
-const useMachine = (machine) => {
+const useMachine = (machine, componentContext = {}) => {
 
     const {current: service} = useRef(interpret(machine, () => {
         setState(service.machine.current);
         setContext(service.context)
-    }));
-
-    console.log(service);
+    }, componentContext));
     const [state, setState] = useState(service.machine.current);
-    const [context, setContext] = useState(service.context);
+    const [context, setContext] = useState(componentContext);
     const send = useCallback((type, params = {}) => {
         service.send({type, ...params})
     }, [service]);

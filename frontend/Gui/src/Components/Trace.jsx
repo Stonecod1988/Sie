@@ -2,11 +2,11 @@ import React from 'react'
 import {Breadcrumb} from "antd";
 
 
-const Trace = (props) => {
+const Trace = () => {
 
 
     return (
-        <Breadcrumb style={{margin: '16px 0'}}>
+        <Breadcrumb style={{textAlign: "center"}}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>

@@ -5,7 +5,7 @@
   "Licence": "MIT",
   "Contrinutors": [
     {
-      "name": "Kerin DJIALEU"
+      "name": "Saleka IT"
     }
   ],
   "scripts": {
@@ -15,12 +15,19 @@
   "dependencies": {
     "antd": "^4.9.2",
     "axios": "^0.21.0",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-i18next": "^11.8.4",
     "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.1",
     "robot3": "^0.2.18"
   },
   "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "popper.js": "^1.16.1",
     "vite": "^1.0.0-rc.13",
     "vite-plugin-react": "^4.0.0"
   }

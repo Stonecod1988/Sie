@@ -1,0 +1,12 @@
+{
+  "common": {
+    "translate-button": "EN",
+    "translated-text": "This is english"
+  },
+  "header": {
+    "translated-menu-text1": "Home",
+    "translated-menu-text2": "Programs & Projects",
+    "translated-menu-text3": "Indicators",
+    "translated-menu-text4": "Contact"
+  }
+}

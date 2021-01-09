@@ -3,11 +3,12 @@ import {createMachine, guard, invoke, reduce, state, transition} from "robot3";
 const wait = (duration) => {
     return new Promise((resolve, reject) => {
         window.setTimeout(() => {
-            resolve()
-            // reject(new Error("impossible de synchroniser"))
+            // resolve()
+            reject(new Error("impossible de synchroniser"))
         }, duration)
     })
 };
+
 
 export default createMachine({
     idle: state(
@@ -41,5 +42,5 @@ export default createMachine({
         transition("dismiss", "edit"),
         transition("cancel", "idle")
     )
-}, () => ({title: "titre à changer"}));
+}, (componentContext) => componentContext);
 
