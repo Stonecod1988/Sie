@@ -10,13 +10,11 @@ import BaseRouter from "./routes";
 function App() {
 
     return (
-        <>
             <Router>
                 <CustomHeader/>
                 <BaseRouter/>
                 <CustomFooter/>
             </Router>
-        </>
     );
 }
 

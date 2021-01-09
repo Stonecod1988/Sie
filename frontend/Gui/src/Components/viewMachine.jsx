@@ -3,17 +3,20 @@ import useMachine from "../Hooks/useMachine";
 import machine from "../Machine"
 import {Alert, Input, Spin} from "antd";
 
-const ViewMachine = (props) => {
-    const [state, context, send, can] = useMachine(machine);
+const componentContext = {
+    title: 'le titre à changer'
+};
+const ViewMachine = () => {
+    const [state, context, send, can] = useMachine(machine, componentContext);
     const editMod = !["idle", "success"].includes(state);
-    console.log('render');
     const dismiss = useCallback(() => {
         send('dismiss')
     }, [send]);
 
     return (
-        <div>
-            <p style={{marginTop: "100px", textAlign: 'center'}}>Interface de test de ma machine à état</p>
+        <div style={{height: '500px'}}>
+            <h1 style={{marginTop: "100px", textAlign: 'center'}}><strong>Interface de test de ma machine à
+                état</strong></h1>
             {state === "success" && <Alert style={{width: "500px", margin: "auto", marginBottom: "10px"}}
                                            message="Le titre a bien été sauvegarder avec success"
                                            description="le détail est vide pour l'instant"
@@ -33,7 +36,7 @@ const ViewMachine = (props) => {
 
             <div className="machine1">
                 {state === "loading" && <Spin/>}
-                {!editMod ? (<h1>{context.title}</h1>) :
+                {!editMod ? (<h3>{context.title}</h3>) :
                     <Input
                         placeholder="Entrer un titre"
                         disabled={!can("input")}
