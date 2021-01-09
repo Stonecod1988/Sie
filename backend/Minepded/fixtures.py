@@ -1,11 +1,16 @@
 import os
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Minepded.settings')
+
 import django
+
+django.setup()
+
+
 import random
 from faker import Faker
 from Sie.models import *
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Minepded.settings')
-django.setup()
 fakeagent = Faker()
 
 
