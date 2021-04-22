@@ -6,7 +6,7 @@ Pour lancer le projet chez vous!!!
 
 ### Côté serveur ###
 
-1. Créer un environnement virtuel (conda ou venv ou viurtual en fonction de vous)
+1. Créer un environnement virtuel (conda ou venv ou virtualenv en fonction de vous)
     
 2. Se rendre dans le dossier de notre choix puis git clône du projet 
     à la racine du projet dans le dossier contenant requirements.txt (Minepded)
